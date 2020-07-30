@@ -68,7 +68,31 @@ export default function Login({navigation,title}) {
         <Text style={{ fontWeight: "bold" }}>Get Help with signing in</Text>
       </Text>
 
-      <View style={{...styles.buttons,marginTop:50}}>
+      <View style={{paddingTop:30,flexDirection:"row",alignItems:"center",justifyContent:"center"}}>
+        <View style={{width:"40%",borderWidth:0.5,borderColor:"black",height:1,margin:10 }}></View>
+        <Text>or</Text>
+        <View style={{width:"40%",borderWidth:0.5,borderColor:"black",height:1,margin:10}}></View>
+      </View>
+      <View style={{flexDirection:"row",paddingTop:20,alignItems:"center",justifyContent:"center"}}>
+      <View style={styles.social}>
+        <TouchableOpacity>
+          <FlatButton onPress={loginHandler} text="Facebook" color="#0D47A1"></FlatButton>
+        </TouchableOpacity>
+      </View>
+      <View style={styles.social}>
+        <TouchableOpacity>
+          <FlatButton onPress={loginHandler} text="Google" color="#F44336"></FlatButton>
+        </TouchableOpacity>
+      </View>
+      </View>
+      <View style={{paddingTop:30,flexDirection:"row",alignItems:"center",justifyContent:"center"}}>
+        <View style={{width:"40%",borderWidth:0.5,borderColor:"black",height:1,margin:10 }}></View>
+        <Text>or</Text>
+        <View style={{width:"40%",borderWidth:0.5,borderColor:"black",height:1,margin:10}}></View>
+      </View>
+
+
+      <View style={{...styles.buttons,marginTop:30}}>
         <TouchableOpacity>
           <HollowButton text="Sign Up" color="white"></HollowButton>
         </TouchableOpacity>
@@ -84,12 +108,16 @@ const styles = StyleSheet.create({
   container: {
     paddingVertical:50,
     alignItems: "center",
-    justifyContent: "flex-start",
     margin:20
   },
   buttons:{
     width:"100%"
   },
+  social:{
+    width:"40%",
+    marginRight:"6%",
+    marginLeft:"6%"
+  },  
   input: {
     width: "100%",
     borderWidth: 1,
