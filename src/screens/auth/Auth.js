@@ -34,6 +34,7 @@ export default function Login({navigation,title}) {
     
     
     <ScrollView contentContainerStyle={styles.container}>
+      
       <View style={styles.header}>
       <ImageBackground style={styles.header}>
       {/* <MaterialIcons
@@ -53,6 +54,9 @@ export default function Login({navigation,title}) {
        </View> 
     </ImageBackground>
       </View>
+
+      <View style={styles.subContainer}>
+
       <Text style={styles.textInput}>Phone number / Email Adress</Text>
       <TextInput style={styles.input} />
       <Text style={styles.textInput}>Password</Text>
@@ -97,6 +101,8 @@ export default function Login({navigation,title}) {
           <HollowButton text="Sign Up" color="white"></HollowButton>
         </TouchableOpacity>
       </View>
+      </View>
+
 
 
     </ScrollView>
@@ -106,8 +112,15 @@ export default function Login({navigation,title}) {
 
 const styles = StyleSheet.create({
   container: {
-    paddingVertical:50,
+    paddingBottom:200,
     alignItems: "center",
+    textAlign:"left"
+
+    
+  },
+  subContainer:{
+    alignItems: "center",
+    width:"90%",
     margin:20
   },
   buttons:{
@@ -127,12 +140,14 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   textInput: {
-    color: "grey"
+    padding:10,
+    color: "grey",
+    
   },
   header: {
     backgroundColor:"#46D5D8",
     width: "100%",
-    height: "3%",
+    height: "40%",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
@@ -151,9 +166,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   headerImage: {
-    width:"50%",
-    height: "50%",
-    marginHorizontal: 0,
-    left:20
+    width:200,
+    height: 200,
+  
   },
 });
