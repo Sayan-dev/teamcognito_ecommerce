@@ -12,6 +12,8 @@ import {FlatButton} from "../../shared/button";
 import {HollowButton} from "../../shared/button";
 import { ScrollView } from "react-native-gesture-handler";
 import AsyncStorage from "@react-native-community/async-storage";
+import { Icon } from 'react-native-elements'
+
 
 export default function Login({navigation,title}) {
   const loginHandler=async()=>{
@@ -33,16 +35,19 @@ export default function Login({navigation,title}) {
   return (
     
     
-    <ScrollView contentContainerStyle={styles.container}>
+    <View style={styles.container}>
       
       <View style={styles.header}>
-      <ImageBackground style={styles.header}>
-      {/* <MaterialIcons
-        name="menu"
-        size={28}
-        onPress={openMenu}
-        style={styles.icon}
-      /> */}
+        <View style={styles.icon}>
+        <Icon
+        name="close"
+        size={50}
+        onPress={()=>{navigation.navigate('Home')}}
+        // style={styles.icon}
+      />
+        </View>
+  
+      
       <View style={styles.headerTitle}>
         <Image
           source={{
@@ -52,7 +57,7 @@ export default function Login({navigation,title}) {
         />
         <Text style={styles.headerText}>{title}</Text>
        </View> 
-    </ImageBackground>
+
       </View>
 
       <View style={styles.subContainer}>
@@ -105,7 +110,7 @@ export default function Login({navigation,title}) {
 
 
 
-    </ScrollView>
+    </View>
     
   );
 }
@@ -148,9 +153,12 @@ const styles = StyleSheet.create({
     backgroundColor:"#46D5D8",
     width: "100%",
     height: "40%",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
+    flexDirection: "column",
+
+  },
+  icon:{
+    alignItems:"flex-end",
+    padding:10
   },
   headerText: {
     fontWeight: "bold",
@@ -159,11 +167,11 @@ const styles = StyleSheet.create({
     letterSpacing: 1,
     paddingTop: 10,
   },
-  icon: {
-
-  },
   headerTitle: {
     flexDirection: "row",
+    paddingTop:20,
+    alignItems:"center",
+    justifyContent:"center"
   },
   headerImage: {
     width:200,

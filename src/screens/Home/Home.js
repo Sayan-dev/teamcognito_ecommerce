@@ -4,8 +4,8 @@ import { View, Text, StyleSheet, TouchableOpacity, Button } from 'react-native';
 const HomeScreen = ({ navigation, route }) => {
     const placesHandler=()=>{
 
-       navigation.navigate('MainTabs')
-    // navigation.toggleDrawer()
+      //  navigation.navigate('MainTabs')
+    navigation.toggleDrawer()
     }
     return (
         <View style={styles.container}>

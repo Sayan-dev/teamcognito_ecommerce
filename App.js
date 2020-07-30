@@ -24,6 +24,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import AuthScreen from './src/screens/auth/Auth';
 import AsyncStorage from '@react-native-community/async-storage';
+import Navigator from './src/routes/drawer';
 
 // import MainTabsScreen from './src/screens/MainTabsScreen/MainTabsScreen';
 import HomeScreen from './src/screens/Home/Home';
@@ -65,35 +66,10 @@ const App= () => {
   
     return (
       <ThemeContext.Provider value="dark">
-        <NavigationContainer>
-  <Stack.Navigator initialRouteName={!login?"Auth":"Home"}
-            screenOptions={{
-              headerShown: false
-            }}
-            >
-  
-          {!login?<Stack.Screen name="Auth"  >
-  
-          {props => <AuthScreen {...props} login={setLogin} />}
-  
-          </Stack.Screen>:
-          <Stack.Screen name="Home"  options={{ title: 'Home',
-          headerRight: () => (
-            <Button
-              onPress={logOutHandler}
-              title="Logout"
-            />
-          ), }}>
-  
-          {props => <HomeScreen {...props}/>}
-  
-          </Stack.Screen>}
-         <Stack.Screen name="LoginFail" >
-           {props=><LoginFail {...props}/>}
-         </Stack.Screen>
-        </Stack.Navigator>
+        <NavigationContainer >
+          <Navigator/>
         </NavigationContainer>
-  
+
   
       </ThemeContext.Provider>
   

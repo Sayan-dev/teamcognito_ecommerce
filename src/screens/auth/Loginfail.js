@@ -15,7 +15,7 @@ import AsyncStorage from "@react-native-community/async-storage";
 
 export default function LoginFail({navigation,title}){
   const backToLogin=()=>{
-    navigation.navigate("Auth");
+    navigation.navigate("Login");
   }
   return (
     <View style={styles.container}>
