@@ -41,7 +41,7 @@ export default function Login({navigation,title}) {
         <View style={styles.icon}>
         <Icon
         name="close"
-        size={50}
+        size={30}
         onPress={()=>{navigation.navigate('Home')}}
         // style={styles.icon}
       />
@@ -77,12 +77,12 @@ export default function Login({navigation,title}) {
         <Text style={{ fontWeight: "bold" }}>Get Help with signing in</Text>
       </Text>
 
-      <View style={{paddingTop:30,flexDirection:"row",alignItems:"center",justifyContent:"center"}}>
-        <View style={{width:"40%",borderWidth:0.5,borderColor:"black",height:1,margin:10 }}></View>
+      <View style={{paddingTop:10,flexDirection:"row",alignItems:"center",justifyContent:"center"}}>
+        <View style={{width:"40%",borderWidth:0.5,borderColor:"black",height:1,margin:5 }}></View>
         <Text>or</Text>
-        <View style={{width:"40%",borderWidth:0.5,borderColor:"black",height:1,margin:10}}></View>
+        <View style={{width:"40%",borderWidth:0.5,borderColor:"black",height:1,margin:5}}></View>
       </View>
-      <View style={{flexDirection:"row",paddingTop:20,alignItems:"center",justifyContent:"center"}}>
+      <View style={{flexDirection:"row",paddingTop:10,alignItems:"center",justifyContent:"center"}}>
       <View style={styles.social}>
         <TouchableOpacity>
           <FlatButton onPress={loginHandler} text="Facebook" color="#0D47A1"></FlatButton>
@@ -94,14 +94,14 @@ export default function Login({navigation,title}) {
         </TouchableOpacity>
       </View>
       </View>
-      <View style={{paddingTop:30,flexDirection:"row",alignItems:"center",justifyContent:"center"}}>
-        <View style={{width:"40%",borderWidth:0.5,borderColor:"black",height:1,margin:10 }}></View>
+      <View style={{paddingTop:10,flexDirection:"row",alignItems:"center",justifyContent:"center"}}>
+        <View style={{width:"40%",borderWidth:0.5,borderColor:"black",height:1,margin:5 }}></View>
         <Text>or</Text>
-        <View style={{width:"40%",borderWidth:0.5,borderColor:"black",height:1,margin:10}}></View>
+        <View style={{width:"40%",borderWidth:0.5,borderColor:"black",height:1,margin:5}}></View>
       </View>
 
 
-      <View style={{...styles.buttons,marginTop:30}}>
+      <View style={{...styles.buttons,marginTop:5}}>
         <TouchableOpacity>
           <HollowButton text="Sign Up" color="white"></HollowButton>
         </TouchableOpacity>
@@ -117,7 +117,7 @@ export default function Login({navigation,title}) {
 
 const styles = StyleSheet.create({
   container: {
-    paddingBottom:200,
+
     alignItems: "center",
     textAlign:"left"
 
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
   subContainer:{
     alignItems: "center",
     width:"90%",
-    margin:20
+    margin:5
   },
   buttons:{
     width:"100%"
@@ -142,17 +142,17 @@ const styles = StyleSheet.create({
     borderColor: "grey",
     borderRadius: 5,
     padding: 5,
-    marginBottom: 20,
+    marginBottom: 5,
   },
   textInput: {
-    padding:10,
+    padding:5,
     color: "grey",
     
   },
   header: {
     backgroundColor:"#46D5D8",
     width: "100%",
-    height: "40%",
+    height: "20%",
     flexDirection: "column",
 
   },
@@ -169,13 +169,13 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
     flexDirection: "row",
-    paddingTop:20,
+    
     alignItems:"center",
     justifyContent:"center"
   },
   headerImage: {
-    width:200,
-    height: 200,
+    width:70,
+    height: 70,
   
   },
 });
