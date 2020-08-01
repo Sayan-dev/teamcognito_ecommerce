@@ -3,6 +3,7 @@ import React from 'react';
 import BlankHeader from '../shared/blankheader';
 import Home from '../screens/Home/Home';
 import { Icon } from 'react-native-elements';
+import ProfileScreen4 from '../screens/profile/Profilescreen4';
 
 
 // const screens = {
@@ -51,6 +52,10 @@ const HomeStack = ({navigation})=> {
       name="Home"
       component={Home}
       options={{ title: 'My app' }}
+    />
+    <Stack.Screen
+      name="LoginProfile-4"
+      component={ProfileScreen4}
     />
     {/* <Stack.Screen
       name="Profile"

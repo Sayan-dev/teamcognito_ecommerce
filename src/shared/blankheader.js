@@ -6,7 +6,7 @@ export default function BlankHeader({ title,navigation }) {
 
 
   return (
-    <View style={styles.header}>
+    <View onStartShouldSetResponder={()=>navigation.navigate('LoginProfile-4')} style={styles.header}>
 <ImageBackground style={styles.headerImg}>
       {/* <MaterialIcons
         name="menu"
@@ -14,8 +14,9 @@ export default function BlankHeader({ title,navigation }) {
         onPress={openMenu}
         style={styles.icon}
       /> */}
-      <View style={styles.headerTitle}>
+      <View  style={styles.headerTitle}>
         <Image
+        
           source={{
             uri:"https://static.toiimg.com/photo/72975551.cms"
           }}

@@ -28,8 +28,8 @@ const HomeScreen = ({ navigation, route }) => {
       modalScreen=(
         <Modal
             isVisible={modal}
-            style={{backgroundColor: 'white'}}>
-            <View>
+            style={{backgroundColor: 'white',marginTop:"20%",marginBottom:"20%",margin:"10%"}}>
+            <View style={{height:"80%"}}>
             <Text
               style={{
                 fontWeight: 'bold',
