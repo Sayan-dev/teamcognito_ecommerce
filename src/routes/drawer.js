@@ -6,6 +6,7 @@ import React from "react"
 import HomeStack from "./homeStack";
 import LoginStack from "./loginStack";
 import SignUpStack from "./signupStack";
+import DrawerNavigator from "../styles/DrawerNavigator";
 
 // drawer navigation options
 const Drawer=createDrawerNavigator()
@@ -13,7 +14,7 @@ const RootDrawerNavigator = ()=>{
 
 
   return(
-    <Drawer.Navigator drawerType={'front'} drawerStyle={{ width: '60%' }} initialRouteName="Home">
+    <Drawer.Navigator drawerContent={props=><DrawerNavigator {...props}/>} drawerType={'front'} drawerStyle={{ width: '60%' }} initialRouteName="Home">
      {/* <Drawer.Screen name="LoginFail">
         {props=><LoginFailStack {...props}/>}
      </Drawer.Screen> */}

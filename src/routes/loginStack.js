@@ -6,6 +6,7 @@ import LoginFail from "../screens/auth/Loginfail";
 import PasswordFail from "../screens/auth/Passwordfail";
 import OtpVerifyScreen from "../screens/auth/OtpVerify";
 import PasswordReset from "../screens/auth/Passwordreset";
+import UserProfileSetFlat from "../shared/Userprofilemodal";
 
 // const screens = {
 //   Login: {
@@ -55,7 +56,13 @@ const LoginStack =({navigation})=> {
   >
     {props=><PasswordReset {...props}/>}
   </Stack.Screen>
+  <Stack.Screen
+    name="UserProfile"
+  >
+    {props=><UserProfileSetFlat {...props}/>}
+  </Stack.Screen>
 </Stack.Navigator>
+
  )
  
 };

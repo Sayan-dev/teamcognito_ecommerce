@@ -6,7 +6,8 @@ export default function BlankHeader({ title,navigation }) {
 
 
   return (
-    <ImageBackground style={styles.header}>
+    <View style={styles.header}>
+<ImageBackground style={styles.headerImg}>
       {/* <MaterialIcons
         name="menu"
         size={28}
@@ -23,16 +24,20 @@ export default function BlankHeader({ title,navigation }) {
         {/* <Text style={styles.headerText}>{title}</Text> */}
        </View> 
     </ImageBackground>
+    </View>
+    
   );
 }
 
 const styles = StyleSheet.create({
   header: {
     width: "100%",
-    height: "100%",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
+    height: 60,
+
+  },
+  headerImg:{
+    width:"28%",
+    height:"100%"
   },
   headerText: {
     fontWeight: "bold",
@@ -46,13 +51,17 @@ const styles = StyleSheet.create({
     
   },
   headerTitle: {
+    padding:5,
     alignItems:"flex-start",
     width:"100%",
+    height:"100%",
     flexDirection: "row",
   },
   headerImage: {
-    width: 50,
-    height: 50,
+    borderRadius:50,
+
+    width: "100%",
+    height: "100%",
     
   },
   

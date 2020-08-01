@@ -106,7 +106,7 @@ const forgotHandler=()=>{
 
       <View style={{...styles.buttons,marginTop:5}}>
         <TouchableOpacity>
-          <HollowButton onPress={()=>navigation.navigate('Register')} text="Sign Up" color="white"></HollowButton>
+          <HollowButton onPress={()=>navigation.replace('Register')} text="Sign Up" color="white"></HollowButton>
         </TouchableOpacity>
       </View>
       </View>

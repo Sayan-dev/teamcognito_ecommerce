@@ -16,17 +16,17 @@ import {Icon} from 'react-native-elements';
 
 export default function Register({navigation, title}) {
   const registerHandler = async () => {
-    const value = 'Mango Tune';
-    try {
-      await AsyncStorage.setItem('token', value);
-    } catch (e) {
-      // save error
-      navigation.navigate('LoginFail');
-    }
+    // const value = 'Mango Tune';
+    // try {
+    //   await AsyncStorage.setItem('token', value);
+    // } catch (e) {
+    //   // save error
+    //   navigation.navigate('LoginFail');
+    // }
 
-    console.log('Done.');
-    navigation.navigate('LoginFail');
-    register(false);
+    // console.log('Done.');
+    navigation.navigate('UserProfile');
+    // register(false);
     //  navigation.navigate('Home');
   };
 
