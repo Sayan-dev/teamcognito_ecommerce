@@ -25,7 +25,7 @@ export default function Register({navigation, title}) {
     // }
 
     // console.log('Done.');
-    navigation.navigate('UserProfile');
+    navigation.navigate('Home',{modal:true});
     // register(false);
     //  navigation.navigate('Home');
   };

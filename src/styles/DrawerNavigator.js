@@ -32,11 +32,43 @@ const DrawerNavigator = (props) => {
             </View>
 
         <DrawerContentScrollView {...props}>
-            <View>
-                <Text>
-                    Main Tabs
-                </Text>
-            </View>
+            <Drawer.Section>
+            <Drawer.Item
+
+                icon={()=><Icon 
+                    name="home"
+                    size={30}
+                    />}
+
+                label="Home"
+                onPress={()=>props.navigation.navigate('Home')}
+
+                /> 
+                <Drawer.Item
+
+                icon={()=><Icon 
+                    name="person"
+                    size={30}
+                    />}
+
+                label="Login"
+                onPress={()=>{
+                    props.navigation.navigate('Login')
+                }}
+
+                /> 
+                <Drawer.Item
+
+                icon={()=><Icon 
+                    name="person"
+                    size={30}
+                    />}
+
+                label="Register"
+                onPress={()=>props.navigation.navigate('Register')}
+
+                /> 
+            </Drawer.Section>
             
         </DrawerContentScrollView>
         <Drawer.Section style={{justifyContent:"flex-start",width:"100%"}}>
