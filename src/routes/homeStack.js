@@ -55,8 +55,9 @@ const HomeStack = ({navigation})=> {
     />
     <Stack.Screen
       name="LoginProfile-4"
-      component={ProfileScreen4}
-    />
+    >
+      {props=><ProfileScreen4 {...props}/>}
+    </Stack.Screen>
     {/* <Stack.Screen
       name="Profile"
       component={ProfileScreen}

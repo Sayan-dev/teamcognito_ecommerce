@@ -1,9 +1,124 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Button, Picker } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Button, Picker, ScrollView } from 'react-native';
 import { Icon } from 'react-native-elements';
 import Modal from 'react-native-modal';
 import {FlatButton} from '../../shared/button';
 import AsyncStorage from '@react-native-community/async-storage';
+import LenderScreen from './Lenders/LenderScreen';
+
+
+const lenders=[
+  {
+    id:1,
+    name:"Mango Boy",
+    follow:false,
+    rating:4.9,
+    brands:[
+      {
+        id:1,
+        name:"Abcd Efgh",
+        image:"https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        price:79.99,
+        like:false
+      },
+      {
+        id:2,
+        name:"Abcd Efgh",
+        image:"https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        price:79.99,
+        like:true
+      },
+      {
+        id:3,
+        name:"Abcd Efgh",
+        image:"https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        price:79.99,
+        like:false
+      },
+      {
+        id:4,
+        name:"Abcd Efgh",
+        image:"https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        price:79.99,
+        like:false
+      }
+    ]
+  },
+  {
+    id:2,
+  name:"Mango Boy",
+    follow:true,
+    rating:4.9,
+    brands:[
+      {
+        id:1,
+        name:"Abcd Efgh",
+        image:"https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        price:79.99,
+        like:false
+      },
+      {
+        id:2,
+        name:"Abcd Efgh",
+        image:"https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        price:79.99,
+        like:true
+      },
+      {
+        id:3,
+        name:"Abcd Efgh",
+        image:"https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        price:79.99,
+        like:false
+      },
+      {
+        id:4,
+        name:"Abcd Efgh",
+        image:"https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        price:79.99,
+        like:true
+      }
+    ]
+  },
+  {
+    id:3,
+  name:"Mango Boy",
+    follow:true,
+    rating:4.9,
+    brands:[
+      {
+        id:1,
+        name:"Abcd Efgh",
+        image:"https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        price:79.99,
+        like:false
+      },
+      {
+        id:2,
+        name:"Abcd Efgh",
+        image:"https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        price:79.99,
+        like:true
+      },
+      {
+        id:3,
+        name:"Abcd Efgh",
+        image:"https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        price:79.99,
+        like:true
+      },
+      {
+        id:4,
+        name:"Abcd Efgh",
+        image:"https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        price:79.99,
+        like:false
+      }
+    ]
+  }
+]
+
+
 
 const HomeScreen = ({ navigation, route }) => {
     const [modal,isModal]=useState();
@@ -150,15 +265,21 @@ const HomeScreen = ({ navigation, route }) => {
           </Modal>
       )
     }
+
+
     return (
 
-        <View style={styles.container}>
-            <Text>Home screen</Text>
-            {modalScreen}
-            <TouchableOpacity>
-                <Button onPress={placesHandler} title="Lets Go!!"></Button>
-            </TouchableOpacity>
-        </View>
+        <ScrollView contentContainerStyle={styles.container}>
+            {lenders.map((lender)=>{
+                return <LenderScreen 
+                              key={lender.id} 
+                              name={lender.name}
+                              follow={lender.follow}
+                              rating={lender.rating}
+                              brands={lender.brands}
+                              />
+            })}
+        </ScrollView>
     );
 };
 HomeScreen.options = {
@@ -177,7 +298,7 @@ HomeScreen.options = {
   }
 const styles=StyleSheet.create({
     container:{
-        flex:1,
+        
         backgroundColor:"whitesmoke",
         alignItems:"center",
         justifyContent:"center"
