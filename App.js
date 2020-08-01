@@ -66,6 +66,7 @@ const App= () => {
   
     return (
       <ThemeContext.Provider value="dark">
+      <StatusBar hidden/>
         <NavigationContainer >
           <Navigator/>
         </NavigationContainer>

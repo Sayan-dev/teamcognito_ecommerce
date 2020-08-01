@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View, Image, ImageBackground } from "react-native";
 // import { MaterialIcons } from "@expo/vector-icons";
 
-export default function BlankHeader({ title }) {
+export default function BlankHeader({ title,navigation }) {
 
 
   return (
@@ -42,18 +42,18 @@ const styles = StyleSheet.create({
     paddingTop: 10,
   },
   icon: {
-    position: "absolute",
-    left: 10,
+
     
   },
   headerTitle: {
+    alignItems:"flex-start",
+    width:"100%",
     flexDirection: "row",
   },
   headerImage: {
     width: 50,
     height: 50,
-    marginHorizontal: 0,
-    left:20
+    
   },
   
 });

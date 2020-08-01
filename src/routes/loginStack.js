@@ -3,6 +3,9 @@ import React from "react";
 import Header from "../shared/header";
 import Auth from "../screens/auth/Auth";
 import LoginFail from "../screens/auth/Loginfail";
+import PasswordFail from "../screens/auth/Passwordfail";
+import OtpVerifyScreen from "../screens/auth/OtpVerify";
+import PasswordReset from "../screens/auth/Passwordreset";
 
 // const screens = {
 //   Login: {
@@ -36,6 +39,21 @@ const LoginStack =({navigation})=> {
     name="LoginFail"
   >
     {props=><LoginFail {...props}/>}
+  </Stack.Screen>
+  <Stack.Screen
+    name="ForgotPass"
+  >
+    {props=><PasswordFail {...props}/>}
+  </Stack.Screen>
+  <Stack.Screen
+    name="OtpVerify"
+  >
+    {props=><OtpVerifyScreen {...props}/>}
+  </Stack.Screen>
+  <Stack.Screen
+    name="PasswordReset"
+  >
+    {props=><PasswordReset {...props}/>}
   </Stack.Screen>
 </Stack.Navigator>
  )

@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Button } from 'react-native';
+import { Icon } from 'react-native-elements';
 
 const HomeScreen = ({ navigation, route }) => {
     const placesHandler=()=>{
@@ -17,6 +18,7 @@ const HomeScreen = ({ navigation, route }) => {
     );
 };
 HomeScreen.options = {
+  
     topBar: {
       title: {
         text: 'Home',

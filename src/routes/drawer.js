@@ -5,6 +5,7 @@ import { createAppContainer } from "@react-navigation/native";
 import React from "react"
 import HomeStack from "./homeStack";
 import LoginStack from "./loginStack";
+import SignUpStack from "./signupStack";
 
 // drawer navigation options
 const Drawer=createDrawerNavigator()
@@ -22,7 +23,9 @@ const RootDrawerNavigator = ()=>{
      <Drawer.Screen name="Home">
         {props=><HomeStack {...props}/>}
      </Drawer.Screen>
-     
+     <Drawer.Screen name="Register">
+        {props=><SignUpStack {...props}/>}
+     </Drawer.Screen>
      
      </Drawer.Navigator>
     )

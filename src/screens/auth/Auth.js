@@ -30,18 +30,21 @@ export default function Login({navigation,title}) {
   login(false)
   //  navigation.navigate('Home');
 }
+const forgotHandler=()=>{
 
+  navigation.push('ForgotPass')
+}
 
   return (
     
     
-    <View style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
       
       <View style={styles.header}>
         <View style={styles.icon}>
         <Icon
         name="close"
-        size={30}
+        size={40}
         onPress={()=>{navigation.navigate('Home')}}
         // style={styles.icon}
       />
@@ -74,13 +77,13 @@ export default function Login({navigation,title}) {
 
       <Text style={styles.textInput}>
         Forgot your password?{" "}
-        <Text style={{ fontWeight: "bold" }}>Get Help with signing in</Text>
+        <Text onPress={forgotHandler} style={{ fontWeight: "bold" }}>Get Help with signing in</Text>
       </Text>
 
       <View style={{paddingTop:10,flexDirection:"row",alignItems:"center",justifyContent:"center"}}>
-        <View style={{width:"40%",borderWidth:0.5,borderColor:"black",height:1,margin:5 }}></View>
-        <Text>or</Text>
-        <View style={{width:"40%",borderWidth:0.5,borderColor:"black",height:1,margin:5}}></View>
+        <View style={{width:"25%",borderWidth:0.5,borderColor:"black",height:1,margin:5 }}></View>
+        <Text>OR CONNECT WITH</Text>
+        <View style={{width:"25%",borderWidth:0.5,borderColor:"black",height:1,margin:5}}></View>
       </View>
       <View style={{flexDirection:"row",paddingTop:10,alignItems:"center",justifyContent:"center"}}>
       <View style={styles.social}>
@@ -96,28 +99,28 @@ export default function Login({navigation,title}) {
       </View>
       <View style={{paddingTop:10,flexDirection:"row",alignItems:"center",justifyContent:"center"}}>
         <View style={{width:"40%",borderWidth:0.5,borderColor:"black",height:1,margin:5 }}></View>
-        <Text>or</Text>
+        <Text>  OR  </Text>
         <View style={{width:"40%",borderWidth:0.5,borderColor:"black",height:1,margin:5}}></View>
       </View>
 
 
       <View style={{...styles.buttons,marginTop:5}}>
         <TouchableOpacity>
-          <HollowButton text="Sign Up" color="white"></HollowButton>
+          <HollowButton onPress={()=>navigation.navigate('Register')} text="Sign Up" color="white"></HollowButton>
         </TouchableOpacity>
       </View>
       </View>
 
 
 
-    </View>
+    </ScrollView>
     
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-
+    paddingBottom:100,
     alignItems: "center",
     textAlign:"left"
 
@@ -126,7 +129,7 @@ const styles = StyleSheet.create({
   subContainer:{
     alignItems: "center",
     width:"90%",
-    margin:5
+    margin:10
   },
   buttons:{
     width:"100%"
@@ -141,31 +144,32 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "grey",
     borderRadius: 5,
-    padding: 5,
-    marginBottom: 5,
+    padding: 10,
+    marginBottom: 10,
   },
   textInput: {
-    padding:5,
+    width:'100%',
+    padding:10,
     color: "grey",
     
   },
   header: {
     backgroundColor:"#46D5D8",
     width: "100%",
-    height: "20%",
+    height: "30%",
     flexDirection: "column",
 
   },
   icon:{
     alignItems:"flex-end",
-    padding:10
+    padding:15
   },
   headerText: {
     fontWeight: "bold",
     fontSize: 22,
     color: "#333",
     letterSpacing: 1,
-    paddingTop: 10,
+    paddingTop: 20,
   },
   headerTitle: {
     flexDirection: "row",
@@ -174,8 +178,8 @@ const styles = StyleSheet.create({
     justifyContent:"center"
   },
   headerImage: {
-    width:70,
-    height: 70,
+    width:100,
+    height: 100,
   
   },
 });
