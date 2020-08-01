@@ -6,13 +6,13 @@ import { Icon } from 'react-native-elements';
 const Lender = (props) => {
     return (
         <View style={styles.container}>
-            {/* <View style={styles.image}>
+            <View style={styles.image}>
                 <Image
                     source={{
                         uri:props.image
                     }}
                 />
-            </View> */}
+            </View>
             <Text>{props.name}</Text>
             <Text>{props.price}</Text>
             {
@@ -30,6 +30,10 @@ const Lender = (props) => {
 const styles=StyleSheet.create({
     container:{
         height:"100%"
+    },
+    image:{
+        width:150,
+        height:"50%"
     }
 })
 

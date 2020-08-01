@@ -11,6 +11,7 @@ const lenders=[
   {
     id:1,
     name:"Mango Boy",
+    place:"Melbourne",
     follow:false,
     rating:4.9,
     brands:[
@@ -47,6 +48,7 @@ const lenders=[
   {
     id:2,
   name:"Mango Boy",
+  place:"Melbourne",
     follow:true,
     rating:4.9,
     brands:[
@@ -84,6 +86,7 @@ const lenders=[
     id:3,
   name:"Mango Boy",
     follow:true,
+    place:"Melbourne",
     rating:4.9,
     brands:[
       {

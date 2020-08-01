@@ -17,6 +17,9 @@ const LenderScreen = (props) => {
                 />
                 <View>
     <Text>{props.name} - {props.follow?"Following":"Follow"}</Text>
+    <Text>{props.place}</Text>
+    <Text>{props.rating}</Text>
+    <Text></Text>
                     
                 </View>
                 <Icon
@@ -55,7 +58,7 @@ const styles=StyleSheet.create({
         overflow:"hidden",
         
         width:"100%",
-        height:300
+        height:400
     },
     brands:{
         flexDirection:"row",
