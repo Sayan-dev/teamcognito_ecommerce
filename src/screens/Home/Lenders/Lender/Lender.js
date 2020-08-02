@@ -11,17 +11,27 @@ const Lender = (props) => {
                     source={{
                         uri:props.image
                     }}
+                    style={{width:"100%",height:"100%"}}
                 />
+                <View style={{position:"absolute",top:"80%",left:"75%"}}>
+                {
+                props.like?<Icon
+                    name="favorite"
+                    size={30}
+                    color="white"
+                />:<Icon
+                name="favorite-border"
+                size={30}
+                color="white"
+                />
+            }
+
+                </View>
+                           
             </View>
             <Text>{props.name}</Text>
             <Text>{props.price}</Text>
-            {
-                props.like?<Icon
-                    name="favorite"
-                />:<Icon
-                name="favorite-border"
-            />
-            }
+ 
 
         </View>
     );
@@ -29,11 +39,13 @@ const Lender = (props) => {
 
 const styles=StyleSheet.create({
     container:{
-        height:"100%"
+        height:"100%",
+        marginHorizontal:10
     },
     image:{
+        
         width:150,
-        height:"50%"
+        height:"60%"
     }
 })
 
