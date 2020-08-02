@@ -67,6 +67,7 @@ const LenderScreen = (props) => {
                 return <Lender
                         key={brand.id}
                         name={brand.name}
+                        title={brand.title}
                         image={brand.image}
                         price={brand.price}
                         like={brand.like}
@@ -93,7 +94,6 @@ const styles=StyleSheet.create({
         paddingTop:"10%",
         paddingBottom:"10%",
         flexDirection:"row",
-        borderWidth:1,
         width:"100%"
     },
     brands:{

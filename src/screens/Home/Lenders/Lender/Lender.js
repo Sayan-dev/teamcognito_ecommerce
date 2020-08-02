@@ -30,6 +30,7 @@ const Lender = (props) => {
                            
             </View>
             <Text>{props.name}</Text>
+            <Text>{props.title}</Text>
             <Text>{props.price}</Text>
  
 
@@ -45,7 +46,7 @@ const styles=StyleSheet.create({
     image:{
         
         width:150,
-        height:"70%"
+        height:"60%"
     }
 })
 

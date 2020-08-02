@@ -18,6 +18,7 @@ const lenders=[
       {
         id:1,
         name:"Abcd Efgh",
+        title:"Mangoaboais",
         image:"https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         price:79.99,
         like:false
@@ -25,6 +26,7 @@ const lenders=[
       {
         id:2,
         name:"Abcd Efgh",
+        title:"Mangoaboais",
         image:"https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         price:79.99,
         like:true
@@ -32,6 +34,7 @@ const lenders=[
       {
         id:3,
         name:"Abcd Efgh",
+        title:"Mangoaboais",
         image:"https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         price:79.99,
         like:false
@@ -39,6 +42,7 @@ const lenders=[
       {
         id:4,
         name:"Abcd Efgh",
+        title:"Mangoaboais",
         image:"https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         price:79.99,
         like:false
@@ -55,6 +59,7 @@ const lenders=[
       {
         id:1,
         name:"Abcd Efgh",
+        title:"Mangoaboais",
         image:"https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         price:79.99,
         like:false
@@ -62,6 +67,7 @@ const lenders=[
       {
         id:2,
         name:"Abcd Efgh",
+        title:"Mangoaboais",
         image:"https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         price:79.99,
         like:true
@@ -69,6 +75,7 @@ const lenders=[
       {
         id:3,
         name:"Abcd Efgh",
+        title:"Mangoaboais",
         image:"https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         price:79.99,
         like:false
@@ -76,6 +83,7 @@ const lenders=[
       {
         id:4,
         name:"Abcd Efgh",
+        title:"Mangoaboais",
         image:"https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         price:79.99,
         like:true
@@ -92,6 +100,7 @@ const lenders=[
       {
         id:1,
         name:"Abcd Efgh",
+        title:"Mangoaboais",
         image:"https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         price:79.99,
         like:false
@@ -99,6 +108,7 @@ const lenders=[
       {
         id:2,
         name:"Abcd Efgh",
+        title:"Mangoaboais",
         image:"https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         price:79.99,
         like:true
@@ -106,6 +116,7 @@ const lenders=[
       {
         id:3,
         name:"Abcd Efgh",
+        title:"Mangoaboais",
         image:"https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         price:79.99,
         like:true
@@ -113,6 +124,7 @@ const lenders=[
       {
         id:4,
         name:"Abcd Efgh",
+        title:"Mangoaboais",
         image:"https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         price:79.99,
         like:false
