@@ -4,6 +4,7 @@ import BlankHeader from '../shared/blankheader';
 import Home from '../screens/Home/Home';
 import { Icon } from 'react-native-elements';
 import ProfileScreen4 from '../screens/profile/Profilescreen4';
+import ProfileScreen5 from '../screens/profile/Profilrscreen5';
 
 
 // const screens = {
@@ -57,6 +58,11 @@ const HomeStack = ({navigation})=> {
       name="LoginProfile-4"
     >
       {props=><ProfileScreen4 {...props}/>}
+    </Stack.Screen>
+    <Stack.Screen
+      name="LoginProfile-5"
+    >
+      {props=><ProfileScreen5 {...props}/>}
     </Stack.Screen>
     {/* <Stack.Screen
       name="Profile"

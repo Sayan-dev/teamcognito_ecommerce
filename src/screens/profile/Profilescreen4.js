@@ -147,7 +147,7 @@ export default class ProfileScreen4 extends Component {
         <View style={styles.buttons}>
           <TouchableOpacity>
             <FlatButton
-              onPress={()=>this.props.navigation.navigate('Home')}
+              onPress={()=>this.props.navigation.navigate('LoginProfile-5')}
               text="SAVE"
               color="#46D5D8"></FlatButton>
           </TouchableOpacity>

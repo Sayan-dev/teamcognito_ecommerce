@@ -13,15 +13,16 @@ const Lender = (props) => {
                     }}
                     style={{width:"100%",height:"100%"}}
                 />
-                <View style={{position:"absolute",top:"80%",left:"75%"}}>
+                <View style={{position:"absolute",top:"80%",left:"70%"}}>
                 {
                 props.like?<Icon
                     name="favorite"
-                    size={30}
+                    size={25}
                     color="white"
+                    
                 />:<Icon
                 name="favorite-border"
-                size={30}
+                size={25}
                 color="white"
                 />
             }
@@ -30,8 +31,8 @@ const Lender = (props) => {
                            
             </View>
             <Text>{props.name}</Text>
-            <Text>{props.title}</Text>
-            <Text>{props.price}</Text>
+            <Text style={{color:"grey"}}>{props.title}</Text>
+            <Text style={{color:"grey"}}>{props.price}</Text>
  
 
         </View>
@@ -45,7 +46,7 @@ const styles=StyleSheet.create({
     },
     image:{
         
-        width:150,
+        width:110,
         height:"60%"
     }
 })
