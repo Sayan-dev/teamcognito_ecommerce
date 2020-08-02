@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text, Dimensions } from 'react-native';
 import Lender from './Lender/Lender';
 import { ScrollView } from 'react-native-gesture-handler';
 import { Icon } from 'react-native-elements';
@@ -8,6 +8,7 @@ const LenderScreen = (props) => {
     return (
         <View style={styles.container}>
             <View style={styles.heading}>
+                
                 <Icon
                     name="account-circle"
                     style={styles.headerIcon}
@@ -15,13 +16,39 @@ const LenderScreen = (props) => {
                 
                 
                 />
-                <View>
-    <Text>{props.name} - {props.follow?"Following":"Follow"}</Text>
-    <Text>{props.place}</Text>
-    <Text>{props.rating}</Text>
-    <Text></Text>
+                <View style={{flexDirection:"column"}}>
+                <Text style={{paddingHorizontal:"1%"}}>{props.name} - {props.follow?"Following":"Follow"}</Text>
+                <View style={{flexDirection:"row"}}>
+                <Icon
+                    name="place"
+                    style={{...styles.headerIcon,paddingHorizontal:2,}}
+                    size={15}
+                    
+                
+                
+                /><Text>{props.place}</Text>
+
+                </View>
+   
+    
+                <View style={{flexDirection:"row"}}>
+                <Icon
+                    name="star"
+                    style={{...styles.headerIcon,paddingHorizontal:2,}}
+                    size={15}
+                    color="gold"
+                
+                
+                />
+                    <Text>{props.rating}</Text>
+                    
+                    </View>
+   
                     
                 </View>
+
+              
+                <View style={!props.follow?{left:"230%"}:{left:"200%"}}>
                 <Icon
                     name="message"
                     style={styles.headerIcon}
@@ -29,6 +56,8 @@ const LenderScreen = (props) => {
                 
                 
                 />
+                </View>
+                
 
             </View>
             <View style={styles.brands}>
@@ -59,6 +88,13 @@ const styles=StyleSheet.create({
         
         width:"100%",
         height:400
+    },
+    heading:{
+        paddingTop:"10%",
+        paddingBottom:"10%",
+        flexDirection:"row",
+        borderWidth:1,
+        width:"100%"
     },
     brands:{
         flexDirection:"row",

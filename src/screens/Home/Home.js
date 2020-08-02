@@ -277,6 +277,7 @@ const HomeScreen = ({ navigation, route }) => {
                 return <LenderScreen 
                               key={lender.id} 
                               name={lender.name}
+                              place={lender.place}
                               follow={lender.follow}
                               rating={lender.rating}
                               brands={lender.brands}
