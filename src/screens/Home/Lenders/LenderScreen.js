@@ -8,6 +8,7 @@ const LenderScreen = (props) => {
   return (
     <View style={styles.container}>
       <View style={styles.heading}>
+        <View style={{flexDirection:"row",width:"80%",height:"100%"}}>
         <Icon name="account-circle" style={styles.headerIcon} size={50} color="grey"/>
         <View style={{flexDirection: 'column'}}>
           <Text style={{paddingHorizontal: '4%'}}>
@@ -33,7 +34,10 @@ const LenderScreen = (props) => {
           </View>
         </View>
 
-        <View style={!props.follow ? {left: '100%'} : {left: '80%'}}>
+
+        </View>
+        
+        <View style={{justifyContent:"center"}}>
           <Icon name="message" style={styles.headerIcon} size={30} color="grey"/>
         </View>
       </View>
