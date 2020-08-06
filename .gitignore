@@ -103,6 +103,20 @@ node_modules/
 package.json/
 yarn.lock/
 jspm_packages/
+_tests_/
+.vscode/
+android/
+gradle/
+ios/
+.buckconfig/
+.flowconfig/
+.watchmanconfig/
+app.json/
+build.gradle/
+file/
+gradlew/
+gradlew.bat/
+
 
 # TypeScript v1 declaration files
 typings/
