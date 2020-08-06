@@ -12,7 +12,10 @@ import {FlatButton} from "../../shared/button";
 import {HollowButton} from "../../shared/button";
 import { ScrollView } from "react-native-gesture-handler";
 import AsyncStorage from "@react-native-community/async-storage";
-import { Icon } from 'react-native-elements'
+import { Icon } from 'react-native-elements';
+import {SocialButton} from "../../shared/button";
+import {globalStyles, darkbg} from '../../styles/global';
+
 
 
 export default function Login({navigation,title}) {
@@ -65,48 +68,48 @@ const forgotHandler=()=>{
 
       <View style={styles.subContainer}>
 
-      <Text style={styles.textInput}>Phone number / Email Adress</Text>
-      <TextInput style={styles.input} />
-      <Text style={styles.textInput}>Password</Text>
-      <TextInput style={styles.input} />
+      <Text style={globalStyles.lightTitleText}>Phone number / Email Adress</Text>
+      <TextInput style={globalStyles.input} />
+      <Text style={globalStyles.lightTitleText}>Password</Text>
+      <TextInput style={globalStyles.input} />
       <View style={styles.buttons}>
         <TouchableOpacity>
-          <FlatButton onPress={loginHandler} text="Log In" color="#46D5D8"></FlatButton>
+          <FlatButton onPress={loginHandler} text="Log In"></FlatButton>
         </TouchableOpacity>
       </View>
 
-      <Text style={styles.textInput}>
+      <Text style={globalStyles.lightTitleCenterText}>
         Forgot your password?{" "}
         <Text onPress={forgotHandler} style={{ fontWeight: "bold" }}>Get Help with signing in</Text>
       </Text>
 
       <View style={{paddingTop:10,flexDirection:"row",alignItems:"center",justifyContent:"center"}}>
-        <View style={{width:"25%",borderWidth:0.5,borderColor:"black",height:1,margin:5 }}></View>
-        <Text>OR CONNECT WITH</Text>
-        <View style={{width:"25%",borderWidth:0.5,borderColor:"black",height:1,margin:5}}></View>
+        <View style={{width:"30%",borderWidth:0.5,borderColor:"#4A4A4A",height:1,margin:5 }}></View>
+        <Text style={{fontFamily:"Roboto Thin", color:"#A3A3A3"}}>or connect with</Text>
+        <View style={{width:"30%",borderWidth:0.5,borderColor:"#4A4A4A",height:1,margin:5}}></View>
       </View>
       <View style={{flexDirection:"row",paddingTop:10,alignItems:"center",justifyContent:"center"}}>
       <View style={styles.social}>
         <TouchableOpacity>
-          <FlatButton onPress={loginHandler} text="Facebook" color="#0D47A1"></FlatButton>
+          <SocialButton onPress={loginHandler} text="Facebook" color="#0D47A1"></SocialButton>
         </TouchableOpacity>
       </View>
       <View style={styles.social}>
         <TouchableOpacity>
-          <FlatButton onPress={loginHandler} text="Google" color="#F44336"></FlatButton>
+          <SocialButton onPress={loginHandler} text="Google" color="#F44336"></SocialButton>
         </TouchableOpacity>
       </View>
       </View>
       <View style={{paddingTop:10,flexDirection:"row",alignItems:"center",justifyContent:"center"}}>
-        <View style={{width:"40%",borderWidth:0.5,borderColor:"black",height:1,margin:5 }}></View>
-        <Text>  OR  </Text>
-        <View style={{width:"40%",borderWidth:0.5,borderColor:"black",height:1,margin:5}}></View>
+        <View style={{width:"45%",borderWidth:0.5,borderColor:"#4A4A4A",height:1,margin:5 }}></View>
+        <Text style={{fontFamily:"Roboto Thin", color:"#A3A3A3"}}>or</Text>
+        <View style={{width:"45%",borderWidth:0.5,borderColor:"#4A4A4A",height:1,margin:5}}></View>
       </View>
 
 
-      <View style={{...styles.buttons,marginTop:5}}>
+      <View style={{...styles.buttons,marginTop:0}}>
         <TouchableOpacity>
-          <HollowButton onPress={()=>navigation.replace('Register')} text="Sign Up" color="white"></HollowButton>
+          <HollowButton text="Sign Up" color="#33ABB3"></HollowButton>
         </TouchableOpacity>
       </View>
       </View>
@@ -120,7 +123,7 @@ const forgotHandler=()=>{
 
 const styles = StyleSheet.create({
   container: {
-    paddingBottom:100,
+    paddingBottom:200,
     alignItems: "center",
     textAlign:"left"
 
@@ -139,22 +142,14 @@ const styles = StyleSheet.create({
     marginRight:"6%",
     marginLeft:"6%"
   },  
-  input: {
-    width: "100%",
-    borderWidth: 1,
-    borderColor: "grey",
-    borderRadius: 5,
-    padding: 10,
-    marginBottom: 10,
-  },
+  
   textInput: {
-    width:'100%',
     padding:10,
     color: "grey",
     
   },
   header: {
-    backgroundColor:"#46D5D8",
+    backgroundColor:darkbg,
     width: "100%",
     height: "30%",
     flexDirection: "column",
@@ -162,18 +157,18 @@ const styles = StyleSheet.create({
   },
   icon:{
     alignItems:"flex-end",
-    padding:15
+    padding:0
   },
   headerText: {
     fontWeight: "bold",
     fontSize: 22,
     color: "#333",
     letterSpacing: 1,
-    paddingTop: 20,
+    paddingTop: 10,
   },
   headerTitle: {
     flexDirection: "row",
-    
+    paddingTop:20,
     alignItems:"center",
     justifyContent:"center"
   },

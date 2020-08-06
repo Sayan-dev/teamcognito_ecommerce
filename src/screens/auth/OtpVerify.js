@@ -12,6 +12,7 @@ import OTPInputView from '@twotalltotems/react-native-otp-input';
 
 import AsyncStorage from '@react-native-community/async-storage';
 import {Icon} from 'react-native-elements';
+import {globalStyles, darkbg, lightbg} from '../../styles/global'
 
 export default function OtpSend({navigation, title}) {
   const otpResetHandler = async () => {
@@ -72,7 +73,7 @@ export default function OtpSend({navigation, title}) {
         codeInputFieldStyle={styles.underlineStyleBase}
         codeInputHighlightStyle={styles.underlineStyleHighLighted}
         onCodeFilled={(code) => {
-          alert(`Code is ${code}, you are good to go!`);
+          alert(`Code ${code} matched, you are good to go!`);
           //Some backend processing
           navigation.replace('PasswordReset')
         }}
@@ -94,14 +95,13 @@ export default function OtpSend({navigation, title}) {
 
 const styles = StyleSheet.create({
   container: {
-    height:"100%",
+    paddingBottom: 600,
     alignItems: 'center',
     textAlign: 'left',
-    backgroundColor: '#3FBBBD',
+    backgroundColor: darkbg,
   },
 
   icon: {
-    width:"100%",
     alignItems: 'flex-start',
     padding: 10,
   },
@@ -109,19 +109,15 @@ const styles = StyleSheet.create({
     width: 30,
     height: 45,
   },
-  codeInputFieldStyle: {
-    backgroundColor: '#46D5D8',
-  },
-  borderStyleHighLighted: {
-    // borderColor: "#03DAC6",
-  },
+  // 
+  
 
   underlineStyleBase: {
     width: 42,
     height: 45,
     borderWidth: 0,
     borderWidth: 1,
-    backgroundColor: '#10DFE3',
+    backgroundColor: lightbg,
   },
 
   underlineStyleHighLighted: {

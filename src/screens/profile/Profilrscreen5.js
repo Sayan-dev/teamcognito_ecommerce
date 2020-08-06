@@ -9,6 +9,7 @@ import {
   Image,
   Picker
 } from 'react-native';
+import {globalStyles, darkbg} from '../../styles/global';
 import {FlatButton} from '../../shared/button';
 import {HollowButton} from '../../shared/button';
 import {ScrollView} from 'react-native-gesture-handler';
@@ -40,7 +41,7 @@ export default class ProfileScreen5 extends Component {
       <ScrollView style={{backgroundColor:"white"}}>
     <SafeAreaView>
     <View style={styles.container}>
-    <View style={styles.icon}>
+    {/* <View style={styles.icon}>
           <Icon
             name="menu"
             size={50}
@@ -49,14 +50,15 @@ export default class ProfileScreen5 extends Component {
             }}
             // style={styles.icon}
           />
-        </View>
-      <View style={{borderBottomWidth:0.8, borderBottomColor:"#46D5D8", width:"100%"}}>
-      <Text style={{fontWeight:"bold", fontSize:18, marginTop:0,textAlign:"center", color:'#46D5D8', paddingBottom:15}}>Add New Item</Text>
+        </View> */}
+      <View style={{borderBottomWidth:0.8, marginTop:10 ,borderBottomColor:darkbg, width:"100%"}}>
+      <Text style={{fontWeight:"bold", fontSize:18, marginTop:0,textAlign:"center", color:darkbg, paddingBottom:15}}>Closet</Text>
       </View>
       
-          
+      <Text style={{textDecorationLine:"underline", paddingLeft:20,marginTop:10, width:"100%"}}>Add New Item</Text> 
         
       </View>
+        
 
       <View style={styles.subContainer}>
         <View style={{flex:1,flexDirection:"row"}}>
@@ -97,8 +99,8 @@ export default class ProfileScreen5 extends Component {
               source={require('../../assets/squareimg.png')}
             />
         </View>  
-        <Text style={styles.textInput}>Title</Text>
-        <TextInput style={styles.input} />
+        <Text style={globalStyles.lightTitleText}>Title</Text>
+        <TextInput style={globalStyles.input} />
         <Text style={styles.textInput2}>Rental Price</Text>
         
         <Text style={styles.textInput3}>( Per 4 days )              (Per 10 days)              (Per 20 days)</Text>
@@ -231,15 +233,15 @@ export default class ProfileScreen5 extends Component {
                 paddingBottom: 20,
               }}>
               {' '}
-              Height                                                                                       </Text>
+              Colour                                                                                       </Text>
             </View>
             
         <View style={styles.buttons}>
-          <TouchableOpacity>
+          <TouchableOpacity style={{marginBottom:10 }}>
             <FlatButton
               onPress={()=>this.props.navigation.replace('Home')}
               text="SAVE"
-              color="#46D5D8"></FlatButton>
+              ></FlatButton>
           </TouchableOpacity>
         </View>
 
@@ -259,7 +261,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     textAlign: 'left',
     backgroundColor:"#fff",
-    height: "10%"
+    height: "10%",
   },
   subContainer: {
     alignItems: 'center',

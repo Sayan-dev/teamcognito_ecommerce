@@ -14,6 +14,7 @@ import {HollowButton} from '../../shared/button';
 import {ScrollView} from 'react-native-gesture-handler';
 import AsyncStorage from '@react-native-community/async-storage';
 import {Icon} from 'react-native-elements';
+import {globalStyles, darkbg} from '../../styles/global';
 
 export default class ProfileScreen4 extends Component {
     profileHandler = async () => {
@@ -42,7 +43,7 @@ export default class ProfileScreen4 extends Component {
     <View >
       <View style={styles.header}>
           <View style={{width:"100%",height:"100%", justifyContent:"center", marginLeft:20}}>
-          <Text style={{textDecorationLine:"underline", fontWeight:"bold",color:"white"}}>Edit Profile</Text>
+          <Text style={{textDecorationLine:"underline", fontWeight:"bold",color:"#4A4A4A"}}>Edit Profile</Text>
           </View>
         
             
@@ -63,17 +64,17 @@ export default class ProfileScreen4 extends Component {
                 fontWeight: 'bold',
                 textAlign: 'center',
                 marginBottom: 20,
-                color:'#46D5D8',
+                color:darkbg,
                 borderBottomWidth:0.5,
-                borderBottomcolor:'#46D5D8',
+                borderBottomcolor:darkbg,
               }}>
               Upload a profile picture
             </Text>
-        <Text style={styles.textInput}>Full Name                                                                                 </Text>
-        <TextInput style={styles.input} />
-        <Text style={styles.textInput}>Screen Name                                                                             </Text>
-        <TextInput style={styles.input} />
-        <Text style={styles.textInput}>Bio                                                                                             </Text>
+        <Text style={globalStyles.lightTitleText}>Full Name                                                                                 </Text>
+        <TextInput style={globalStyles.input} />
+        <Text style={globalStyles.lightTitleText}>Screen Name                                                                             </Text>
+        <TextInput style={globalStyles.input} />
+        <Text style={globalStyles.lightTitleText}>Bio                                                                                             </Text>
         
         <TextInput style={styles.input1} />
             
@@ -149,7 +150,7 @@ export default class ProfileScreen4 extends Component {
             <FlatButton
               onPress={()=>this.props.navigation.navigate('LoginProfile-5')}
               text="SAVE"
-              color="#46D5D8"></FlatButton>
+              ></FlatButton>
           </TouchableOpacity>
         </View>
 
@@ -166,7 +167,7 @@ export default class ProfileScreen4 extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    paddingBottom: 100,
+    paddingBottom: 200,
     alignItems: 'center',
     textAlign: 'left',
     backgroundColor:"#fff"
@@ -217,13 +218,13 @@ const styles = StyleSheet.create({
   
    textInput1: {
     padding: 10,
-    color: '#46D5D8',
+    color: darkbg,
   },
   
   header: {
-    backgroundColor: '#46D5D8',
+    
     width: '100%',
-    height: '6%',
+    height: '9%',
     flexDirection: 'column',
   },
   icon: {

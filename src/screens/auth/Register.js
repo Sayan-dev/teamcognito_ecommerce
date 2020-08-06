@@ -13,6 +13,8 @@ import {HollowButton} from '../../shared/button';
 import {ScrollView} from 'react-native-gesture-handler';
 import AsyncStorage from '@react-native-community/async-storage';
 import {Icon} from 'react-native-elements';
+import {globalStyles, darkbg} from '../../styles/global'
+
 
 export default function Register({navigation, title}) {
   const registerHandler = async () => {
@@ -33,11 +35,11 @@ export default function Register({navigation, title}) {
   return (
     <SafeAreaView>
     <ScrollView contentContainerStyle={styles.container}>
-      <View style={styles.header}>
+    <View style={styles.header}>
         <View style={styles.icon}>
           <Icon
             name="close"
-            size={40}
+            size={50}
             onPress={() => {
               navigation.navigate('Home');
             }}
@@ -56,15 +58,15 @@ export default function Register({navigation, title}) {
         </View>
       </View>
       <View style={styles.subContainer}>
-        <Text style={styles.textInput}>Email Adress                                                                         </Text>
-        <TextInput style={styles.input} />
-          <Text style={styles.textInput}>Phone Number                                                                         </Text>
-        <TextInput style={styles.input} />
-        <Text style={styles.textInput}>Full Name                                                                         </Text>
-        <TextInput style={styles.input} />
-        <Text style={styles.textInput}>Password                                                                         </Text>
-        <TextInput style={styles.input} />
-        <Text style={{textAlign:"center", color:"grey", paddingTop:5}}>
+        <Text style={globalStyles.lightTitleText}>Email Adress                                                                         </Text>
+        <TextInput style={globalStyles.input} />
+        <Text style={globalStyles.lightTitleText}>Phone Number                                                                         </Text>
+        <TextInput style={globalStyles.input} />
+        <Text style={globalStyles.lightTitleText}>Full Name                                                                         </Text>
+        <TextInput style={globalStyles.input} />
+        <Text style={globalStyles.lightTitleText}>Password                                                                         </Text>
+        <TextInput style={globalStyles.input} />
+        <Text style={globalStyles.lightTitleCenterText}>
           Password should be at least 6 characters and contain numbers, special character, and a capital letter
         </Text>
         <View style={styles.buttons}>
@@ -72,7 +74,7 @@ export default function Register({navigation, title}) {
             <FlatButton
               onPress={registerHandler}
               text="CONTINUE"
-              color="#46D5D8"></FlatButton>
+              ></FlatButton>
           </TouchableOpacity>
         </View>
 
@@ -95,7 +97,7 @@ export default function Register({navigation, title}) {
             style={{
               width: '100%',
               borderWidth: 0.5,
-              borderColor: '#46D5D8',
+              borderColor: darkbg,
               height: 1,
               margin: 10,
             }}></View>
@@ -112,7 +114,7 @@ export default function Register({navigation, title}) {
 
 const styles = StyleSheet.create({
   container: {
-    paddingBottom: 100,
+    paddingBottom: 200,
     alignItems: 'center',
     textAlign: 'left',
   },
@@ -125,26 +127,14 @@ const styles = StyleSheet.create({
     width: '100%',
     
   },
-  input: {
-    width: '100%',
-    borderWidth: 1,
-    borderColor: 'grey',
-    borderRadius: 5,
-    padding: 5,
-    marginBottom: 10,
-  },
-  textInput: {
-    padding: 8,
-    color: 'grey',
-
-  },
+  
    textInput1: {
     padding: 10,
-    color: '#46D5D8',
+    color: darkbg,
   },
   
   header: {
-    backgroundColor: '#46D5D8',
+    backgroundColor: darkbg,
     width: '100%',
     height: '30%',
     flexDirection: 'column',
@@ -164,6 +154,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
+
   },
   headerImage: {
     width: 100,

@@ -1,14 +1,31 @@
-import { StyleSheet } from "react-native";
+import {StyleSheet} from 'react-native';
+
+export const darkbg = '#33ABB3';
+export const lightbg = '#7DCAD8';
 
 export const globalStyles = StyleSheet.create({
   titleText: {
-    fontSize: 18,
-    fontWeight: "bold",
-    color: "#333",
+    fontSize: 16,
+    width:"90%",
+    borderBottomWidth:0.5,
+    fontWeight: 'bold',
+    color: '#4A4A4A',
+    fontFamily: 'Roboto Black',
+    marginBottom:10
   },
-  paragraph: {
-    marginVertical: 8,
-    lineHeight: 20,
+  lightTitleText: {
+    color: '#A3A3A3',
+    fontFamily: 'Roboto Thin',
+    width: '90%',
+  },
+  lightTitleCenterText: {
+    color: '#A3A3A3',
+    fontFamily: 'Roboto Thin',
+    textAlign: 'center',
+  },
+
+  textLine: {
+    color: '#A3A3A3',
   },
   container: {
     flex: 1,
@@ -16,26 +33,34 @@ export const globalStyles = StyleSheet.create({
   },
   input: {
     borderWidth: 1,
-    borderColor: "#ddd",
-    padding: 10,
+    borderColor: '#4A4A4A',
+    padding: 7,
     fontSize: 18,
+    width: '100%',
     borderRadius: 6,
+    marginBottom: 20,
   },
   errorText: {
-    color: "crimson",
-    fontWeight: "bold",
+    color: 'crimson',
+    fontWeight: 'bold',
     marginBottom: 10,
     marginTop: 6,
-    textAlign: "center",
+    textAlign: 'center',
+  },
+  background: {
+    backgroundColor: '#33ABB3',
+  },
+  bakgroundTilt: {
+    backgroundColor: '#7DCAD8',
   },
 });
 
-export const images = {
-  ratings: {
-    "1": require("../assets/rating-1.png"),
-    "2": require("../assets/rating-2.png"),
-    "3": require("../assets/rating-3.png"),
-    "4": require("../assets/rating-4.png"),
-    "5": require("../assets/rating-5.png"),
-  },
-};
+// export const images = {
+//   // ratings: {
+//   //   "1": require("../assets/rating-1.png"),
+//   //   "2": require("../assets/rating-2.png"),
+//   //   "3": require("../assets/rating-3.png"),
+//   //   "4": require("../assets/rating-4.png"),
+//   //   "5": require("../assets/rating-5.png"),
+//   // },
+// };

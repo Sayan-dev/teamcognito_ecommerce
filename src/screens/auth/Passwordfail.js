@@ -9,7 +9,7 @@ import {
   Image,
 } from 'react-native';
 import {FlatButton} from '../../shared/button';
-
+import {globalStyles, darkbg} from '../../styles/global';
 import AsyncStorage from '@react-native-community/async-storage';
 import {Icon} from 'react-native-elements';
 import { ScrollView } from 'react-native-gesture-handler';
@@ -33,14 +33,13 @@ export default function PasswordFail({navigation, title}) {
   return (
     <SafeAreaView>
     <ScrollView contentContainerStyle={styles.container}>
-      <View style={styles.header}>
+    <View style={styles.header}>
         <View style={styles.icon}>
           <Icon
-            name="ios-arrow-back"
-            type="ionicon"
-            size={40}
+            name="close"
+            size={50}
             onPress={() => {
-              navigation.navigate('Login');
+              navigation.navigate('Home');
             }}
             // style={styles.icon}
           />
@@ -57,24 +56,24 @@ export default function PasswordFail({navigation, title}) {
         </View>
       </View>
       <View style={styles.subContainer}>
-      <Text style={{fontWeight:"bold"}}>FORGOT YOUR PASSWORD?                                                          </Text>
-      <Text style={{color:"grey", paddingBottom:5}}>Don't worry, we've got you covered. Type in your email adress or phone number you used to register and we'll send you a verification code</Text>
-        <Text style={styles.textInput}>Email Adress</Text>
-        <TextInput style={styles.input} />
+      <Text style={globalStyles.titleText}>Forgot Your Password                       </Text>
+      <Text style={{color:"#4A4A4A", paddingBottom:5}}>Don't worry, we've got you covered. Type in your email adress or phone number you used to register and we'll send you a verification code</Text>
+        <Text style={globalStyles.lightTitleText}>Email Adress                                                                        </Text>
+        <TextInput style={globalStyles.input} />
         <View style={{paddingTop:10,flexDirection:"row",alignItems:"center",justifyContent:"center"}}>
-        <View style={{width:"40%",borderWidth:0.5,borderColor:"black",height:1,margin:10 }}></View>
-        <Text>OR</Text>
-        <View style={{width:"40%",borderWidth:0.5,borderColor:"black",height:1,margin:10}}></View>
+        <View style={{width:"45%",borderWidth:0.5,borderColor:"black",height:1,margin:10 }}></View>
+        <Text style={{fontFamily:"Roboto Thin", color:"#A3A3A3"}}>or</Text>
+        <View style={{width:"45%",borderWidth:0.5,borderColor:"black",height:1,margin:10}}></View>
       </View>
-        <Text style={styles.textInput}>Phone number</Text>
-        <TextInput style={styles.input} />
+        <Text style={globalStyles.lightTitleText}>Phone number                                                                   </Text>
+        <TextInput style={globalStyles.input} />
         
         <View style={styles.buttons}>
           <TouchableOpacity>
             <FlatButton
               onPress={passwordHandler}
               text="CONTINUE"
-              color="#46D5D8"></FlatButton>
+></FlatButton>
           </TouchableOpacity>
         </View>
 
@@ -104,7 +103,7 @@ export default function PasswordFail({navigation, title}) {
         </View>
         <Text style={styles.textInput1}>
           Have an account?{' '}
-          <Text onPress={()=>navigation.pop()} style={{fontWeight: 'bold'}}>Login</Text>
+          <Text style={{fontWeight: 'bold'}}>Login</Text>
         </Text>
       </View>
     </ScrollView>
@@ -114,14 +113,14 @@ export default function PasswordFail({navigation, title}) {
 
 const styles = StyleSheet.create({
   container: {
-    paddingBottom: 100,
+    paddingBottom: 200,
     alignItems: 'center',
     textAlign: 'left',
   },
   subContainer: {
     alignItems: 'center',
     width: '90%',
-    margin: 20,
+    margin: 10,
   },
   buttons: {
     width: '100%',
@@ -136,24 +135,23 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   textInput: {
-    width:'100%',
     padding: 8,
     color: 'grey',
 
   },
    textInput1: {
     padding: 10,
-    color: '#46D5D8',
+    color: darkbg,
   },
   
   header: {
-    backgroundColor: '#46D5D8',
+    backgroundColor: darkbg,
     width: '100%',
     height: '44%',
     flexDirection: 'column',
   },
   icon: {
-    alignItems: 'flex-start',
+    alignItems: 'flex-end',
     padding: 10,
   },
   headerText: {

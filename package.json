@@ -1,5 +1,5 @@
 {
-  "name": "phoneApp",
+  "name": "Pineapple",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -25,7 +25,7 @@
     "react-native": "0.63.2",
     "react-native-confirmation-code-input": "^1.0.4",
     "react-native-countdown-component": "^2.7.1",
-    "react-native-elements": "^2.0.4",
+    "react-native-elements": "^2.1.0",
     "react-native-gesture-handler": "^1.6.1",
     "react-native-material-dropdown": "^0.11.1",
     "react-native-modal": "^11.5.6",
@@ -41,13 +41,13 @@
     "react-redux": "^7.2.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.5",
-    "@babel/runtime": "^7.10.5",
-    "@react-native-community/eslint-config": "^2.0.0",
-    "babel-jest": "^26.1.0",
-    "eslint": "^7.5.0",
-    "jest": "^26.1.0",
-    "metro-react-native-babel-preset": "^0.61.0",
+    "@babel/core": "^7.8.4",
+    "@babel/runtime": "^7.8.4",
+    "@react-native-community/eslint-config": "^1.1.0",
+    "babel-jest": "^25.1.0",
+    "eslint": "^6.5.1",
+    "jest": "^25.1.0",
+    "metro-react-native-babel-preset": "^0.59.0",
     "react-test-renderer": "16.13.1"
   },
   "jest": {
