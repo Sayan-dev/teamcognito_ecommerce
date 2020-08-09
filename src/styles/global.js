@@ -2,6 +2,9 @@ import {StyleSheet} from 'react-native';
 
 export const darkbg = '#33ABB3';
 export const lightbg = '#7DCAD8';
+export const darkgrey = '#4A4A4A';
+export const mediumgrey = '#767576';
+export const lightgrey = '#A3A3A3';
 
 export const globalStyles = StyleSheet.create({
   titleText: {

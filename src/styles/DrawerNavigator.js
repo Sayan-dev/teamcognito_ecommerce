@@ -68,6 +68,8 @@ const DrawerNavigator = (props) => {
                 onPress={()=>props.navigation.navigate('Register')}
 
                 /> 
+                
+                
             </Drawer.Section>
             
         </DrawerContentScrollView>

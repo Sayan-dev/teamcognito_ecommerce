@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, TouchableOpacity, Text, View } from 'react-native';
+import { darkbg, mediumgrey, lightgrey } from '../styles/global';
 
 export function FlatButton({ text, onPress }) {
   return (
@@ -7,6 +8,16 @@ export function FlatButton({ text, onPress }) {
     <TouchableOpacity onPress={onPress}>
       <View style={{...styles.button}}>
         <Text style={styles.buttonText}>{text}</Text>
+      </View>
+    </TouchableOpacity>
+  );
+}
+export function DeleteButton({ text, onPress }) {
+  return (
+    
+    <TouchableOpacity onPress={onPress}>
+      <View style={{...styles.button4}}>
+        <Text style={styles.buttonText4}>{text}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -32,11 +43,11 @@ export function SocialButton({ text, onPress, color }) {
   );
 }
 
-export function HollowButton({ text, onPress,color }) {
+export function HollowButton({ text, onPress}) {
   return (
     
     <TouchableOpacity onPress={onPress}>
-      <View style={{...styles.button1, borderColor:color}}>
+      <View style={{...styles.button1}}>
         <Text style={styles.buttonText1}>{text}</Text>
       </View>
     </TouchableOpacity>
@@ -85,9 +96,22 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     backgroundColor: 'white',
     borderWidth:1,
+    borderColor: darkbg,
     elevation:1,
     width: "100%",
-    marginTop: 20,
+    marginTop: 10,
+    marginBottom:10
+  },
+ button4: {
+    borderRadius: 8,
+    paddingVertical: 14,
+    paddingHorizontal: 10,
+    backgroundColor: 'white',
+    borderWidth:1,
+    borderColor: mediumgrey,
+    elevation:1,
+    width: "100%",
+    marginTop: 10,
     marginBottom:20
   },
  
@@ -99,10 +123,18 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   buttonText1: {
-    color: '#46D5D8',
+    color: darkbg,
     fontWeight: 'bold',
     // textTransform: 'uppercase',
     fontSize: 16,
     textAlign: 'center',
-  }
+  },
+  buttonText4: {
+    color: lightgrey,
+    fontWeight: 'bold',
+    // textTransform: 'uppercase',
+    fontSize: 16,
+    textAlign: 'center',
+  },
+  
 });

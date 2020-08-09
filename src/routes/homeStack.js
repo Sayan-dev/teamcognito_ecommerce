@@ -5,6 +5,9 @@ import Home from '../screens/Home/Home';
 import { Icon } from 'react-native-elements';
 import ProfileScreen4 from '../screens/profile/Profilescreen4';
 import ProfileScreen5 from '../screens/profile/Profilrscreen5';
+import ProfileScreen6 from '../screens/profile/Profilescreen6';
+import ProfileScreen7 from '../screens/profile/Profilescreen7';
+import {darkbg, globalStyles} from '../styles/global';
 
 
 // const screens = {
@@ -46,7 +49,7 @@ const HomeStack = ({navigation})=> {
         />
       ),
       headerTitle: () => <BlankHeader title='LOGO' navigation={navigation} />,
-      headerStyle: {backgroundColor: "#46D5D8", height: 60 },
+      headerStyle: {backgroundColor: darkbg, height: 60 },
     }}
   >
     <Stack.Screen
@@ -69,6 +72,17 @@ const HomeStack = ({navigation})=> {
       component={ProfileScreen}
       initialParams={{ user: 'me' }}
     /> */}
+    <Stack.Screen
+      name="LoginProfile-6"
+    >
+      {props=><ProfileScreen6 {...props}/>}
+    </Stack.Screen>
+    <Stack.Screen
+      name="LoginProfile-7"
+    >
+      {props=><ProfileScreen7 {...props}/>}
+    </Stack.Screen>
+    
   </Stack.Navigator>
   );
 

@@ -8,6 +8,7 @@ import LoginStack from "./loginStack";
 import SignUpStack from "./signupStack";
 import DrawerNavigator from "../styles/DrawerNavigator";
 
+
 // drawer navigation options
 const Drawer=createDrawerNavigator()
 const RootDrawerNavigator = ()=>{
@@ -27,6 +28,7 @@ const RootDrawerNavigator = ()=>{
      <Drawer.Screen name="Register">
         {props=><SignUpStack {...props}/>}
      </Drawer.Screen>
+ 
      
      </Drawer.Navigator>
     )

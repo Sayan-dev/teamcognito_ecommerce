@@ -239,7 +239,7 @@ export default class ProfileScreen5 extends Component {
         <View style={styles.buttons}>
           <TouchableOpacity style={{marginBottom:10 }}>
             <FlatButton
-              onPress={()=>this.props.navigation.replace('Home')}
+              onPress={()=>this.props.navigation.replace('LoginProfile-6')}
               text="SAVE"
               ></FlatButton>
           </TouchableOpacity>
