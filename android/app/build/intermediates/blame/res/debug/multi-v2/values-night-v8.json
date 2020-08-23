@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Blackberry\\teamcognito_ecommerce\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "D:\\Lendit\\teamcognito_ecommerce\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Dell\\.gradle\\caches\\transforms-2\\files-2.1\\116c92be44f96604e1209df60e1d9ac4\\material-1.1.0\\res\\values-night-v8\\values-night-v8.xml",

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Blackberry\\teamcognito_ecommerce\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pl\\values-pl.xml",
+            "outputFile": "D:\\Lendit\\teamcognito_ecommerce\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pl\\values-pl.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Dell\\.gradle\\caches\\transforms-2\\files-2.1\\7f5aeccd48d5bc731df0adf1c8d7029e\\core-1.1.0\\res\\values-pl\\values-pl.xml",

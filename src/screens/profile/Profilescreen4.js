@@ -51,14 +51,10 @@ export default class ProfileScreen4 extends Component {
       </View>
 
       <View style={styles.subContainer}>
-      <Icon
-            name="menu"
-            size={100}
-            onPress={() => {
-              navigation.navigate('Home');
-            }}
-            // style={styles.icon}
-          />
+      <Image 
+      style={{height:130, width:130}}
+      source={require('../../assets/uploadimg.png')}
+      />
             <Text
               style={{
                 fontWeight: 'bold',

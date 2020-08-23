@@ -1,4 +1,4 @@
-#Thu Aug 06 08:51:52 IST 2020
-base.0=D\:\\Blackberry\\teamcognito_ecommerce\\android\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Mon Aug 17 20:43:41 IST 2020
+base.0=D\:\\Lendit\\teamcognito_ecommerce\\android\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

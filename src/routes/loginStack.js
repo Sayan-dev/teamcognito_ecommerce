@@ -61,6 +61,8 @@ const LoginStack =({navigation})=> {
   >
     {props=><UserProfileSetFlat {...props}/>}
   </Stack.Screen>
+
+  
 </Stack.Navigator>
 
  )

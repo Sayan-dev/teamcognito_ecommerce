@@ -96,11 +96,11 @@ export default class ProfileScreen6  extends Component {
               }}>
                 <View style={styles.socialtext}>
                 
-                <Text>      4 days for $99              </Text>
+                <Text>             4 days for $99      </Text>
                 </View>
                 <View style={styles.socialtext}>
                                 
-                                <Text>10 days for $199          </Text>
+                                <Text>10 days for $199      </Text>
                                 </View>
                 <View style={styles.socialtext}>
                                 
@@ -138,11 +138,11 @@ export default class ProfileScreen6  extends Component {
               }}>
                 <View style={styles.socialtext}>
                 
-                <Text>$999                                            </Text>
+                <Text>            $999                                 </Text>
                 </View>
                 <View style={styles.socialtext}>
                                 
-                                <Text>     $1299                                          </Text>
+                                <Text>          $1299                                          </Text>
                                 </View>
                 
 
@@ -179,9 +179,9 @@ export default class ProfileScreen6  extends Component {
                 alignItems: 'center',
                 justifyContent: 'center',
               }}>
-                <View style={styles.socialtext}>
+                           <View style={styles.socialtext}>
                 
-                <Text>  Two Tier                                           </Text>
+                <Text>           Two Tier                                      </Text>
                 </View>
                 <View style={styles.socialtext}>
                                 
@@ -216,13 +216,13 @@ export default class ProfileScreen6  extends Component {
                 alignItems: 'center',
                 justifyContent: 'center',
               }}>
-                <View style={styles.socialtext}>
+                             <View style={styles.socialtext}>
                 
-                <Text>Luxury                                          </Text>
+                <Text>      Luxury                                          </Text>
                 </View>
                 <View style={styles.socialtext}>
                                 
-                                <Text>           6                                          </Text>
+                                <Text>  6                                          </Text>
                                 </View>
                                 </View>
                      <View
@@ -256,11 +256,11 @@ export default class ProfileScreen6  extends Component {
               }}>
                 <View style={styles.socialtext}>
                 
-                <Text>Chocolate                                          </Text>
+                <Text>       Chocolate                                      </Text>
                 </View>
                 <View style={styles.socialtext}>
                                 
-                                <Text>       6                                          </Text>
+                                <Text> 6                                          </Text>
                                 </View>
                                 </View>
 
@@ -278,6 +278,7 @@ export default class ProfileScreen6  extends Component {
             <HollowButton
               
               text="Edit Item"
+              onPress={()=>this.props.navigation.navigate('SingleProductScreen1A')}
               
               ></HollowButton>
           </TouchableOpacity>
