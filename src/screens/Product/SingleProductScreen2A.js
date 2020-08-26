@@ -190,7 +190,7 @@ export default class SingleProductScreen2A extends Component {
           <View style={styles.cardBox}>
             <Text style={{marginTop: '1%', marginLeft: '5%'}}>
               Mastercard **** 3241{' '}
-              <Text style={{color: lightgrey, fontSize: 32}}>                         ></Text>
+              <Text style={{color: lightgrey, fontSize: 32}}> ></Text>
             </Text>
             {/* keyboard_arrow_right */}
 
@@ -306,7 +306,7 @@ export default class SingleProductScreen2A extends Component {
             <FlatButton
               text="Request Now"
               onPress={() =>
-                this.props.navigation.navigate('SingleProductScreen3')
+                this.props.navigation.navigate('SingleProductScreen4')
               }></FlatButton>
           </TouchableOpacity>
         </View>

@@ -11,6 +11,7 @@ import {darkbg, globalStyles} from '../styles/global';
 import SingleProductScreen1A from '../screens/Product/SingleProductScreen1A';
 import SingleProductScreen2A from '../screens/Product/SingleProductScreen2A';
 import SingleProductScreen3 from '../screens/Product/SingleProductScreen3';
+import SingleProductScreen4 from '../screens/Product/SingleProductScreen4';
 
 // const screens = {
 //   Home: {
@@ -78,7 +79,9 @@ const HomeStack = ({navigation}) => {
       <Stack.Screen name="SingleProductScreen3">
         {(props) => <SingleProductScreen3 {...props} />}
       </Stack.Screen>
-      
+      <Stack.Screen name="SingleProductScreen4">
+        {(props) => <SingleProductScreen4 {...props} />}
+      </Stack.Screen>
     </Stack.Navigator>
   );
 };

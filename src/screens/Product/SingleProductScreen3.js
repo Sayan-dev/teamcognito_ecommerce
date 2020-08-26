@@ -83,13 +83,12 @@ export default SingleProductScreen3 = () => {
               </View>
             </View>
 
-            <View style={styles.buttons}>
+            <View style={styles.modalButtons}>
               <TouchableOpacity>
                 <FlatButton
                   text="Proceed"
-                  onPress={() => {
-                    setModalVisible(!modalVisible);
-                  }}></FlatButton>
+                  onPress={() => this.props.navigation.navigate('SingleProductScreen3')}
+                  ></FlatButton>
               </TouchableOpacity>
             </View>
           </View>
@@ -98,8 +97,9 @@ export default SingleProductScreen3 = () => {
 
       <TouchableHighlight
         style={styles.openButton}
+        
         onPress={() => {
-          setModalVisible(true);
+          setModalVisible(!modalVisible);
         }}>
         <Text style={styles.textStyle}>Show Modal</Text>
       </TouchableHighlight>
@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 0,
   },
-  buttons: {
+  modalButtons: {
     width: '90%',
     marginLeft: '3%',
     marginRight: '3%',
