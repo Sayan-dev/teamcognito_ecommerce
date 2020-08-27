@@ -87,8 +87,9 @@ export default SingleProductScreen3 = () => {
               <TouchableOpacity>
                 <FlatButton
                   text="Proceed"
-                  onPress={() => this.props.navigation.navigate('SingleProductScreen3')}
-                  ></FlatButton>
+                  onPress={() =>
+                    this.props.navigation.navigate('SingleProductScreen3')
+                  }></FlatButton>
               </TouchableOpacity>
             </View>
           </View>
@@ -97,7 +98,6 @@ export default SingleProductScreen3 = () => {
 
       <TouchableHighlight
         style={styles.openButton}
-        
         onPress={() => {
           setModalVisible(!modalVisible);
         }}>

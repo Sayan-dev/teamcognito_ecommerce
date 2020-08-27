@@ -71,7 +71,7 @@ export default class SingleProductScreen2A extends Component {
             <FlatButton
               text="Request Now"
               onPress={() =>
-                this.props.navigation.navigate('SingleProductScreen2A')
+                this.props.navigation.navigate('CurrentlyRentingScreen1')
               }></FlatButton>
           </TouchableOpacity>
         </View>
@@ -255,7 +255,7 @@ export default class SingleProductScreen2A extends Component {
             <HollowButton
               text="See Details"
               onPress={() =>
-                this.props.navigation.navigate('SingleProductScreen3')
+                this.props.navigation.navigate('CurrentlyRentingScreen3A')
               }></HollowButton>
           </TouchableOpacity>
         </View>

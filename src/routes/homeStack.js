@@ -12,6 +12,8 @@ import SingleProductScreen1A from '../screens/Product/SingleProductScreen1A';
 import SingleProductScreen2A from '../screens/Product/SingleProductScreen2A';
 import SingleProductScreen3 from '../screens/Product/SingleProductScreen3';
 import SingleProductScreen4 from '../screens/Product/SingleProductScreen4';
+import CurrentlyRentingScreen1 from '../screens/Rentals/CurrentlyRentingScreen1';
+import CurrentlyRentingScreen3A from '../screens/Rentals/CurrentlyRentingScreen3A';
 
 // const screens = {
 //   Home: {
@@ -81,6 +83,12 @@ const HomeStack = ({navigation}) => {
       </Stack.Screen>
       <Stack.Screen name="SingleProductScreen4">
         {(props) => <SingleProductScreen4 {...props} />}
+      </Stack.Screen>
+      <Stack.Screen name="CurrentlyRentingScreen1">
+        {(props) => <CurrentlyRentingScreen1 {...props} />}
+      </Stack.Screen>
+      <Stack.Screen name="CurrentlyRentingScreen3A">
+        {(props) => <CurrentlyRentingScreen3A {...props} />}
       </Stack.Screen>
     </Stack.Navigator>
   );
